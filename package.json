@@ -1,0 +1,41 @@
+{
+  "name": "pixelletter-mcp",
+  "version": "1.0.0",
+  "description": "Local stdio MCP server for the PixelLetter HTTPS interface: send PDF files or plain text as physical letters and faxes, with registered mail options, test mode and account balance.",
+  "author": "Fabian Bitter (fabian@bitter.de)",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "bin": {
+    "pixelletter-mcp": "dist/src/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json --watch",
+    "start": "node dist/src/index.js",
+    "test": "npm run build && node --test dist/test/*.test.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "pixelletter",
+    "letter",
+    "fax",
+    "post"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3"
+  }
+}
