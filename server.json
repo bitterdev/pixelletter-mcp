@@ -1,0 +1,10 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.bitterdev/pixelletter-mcp",
+  "description": "Send physical letters and faxes through the PixelLetter interface, test mode included.",
+  "repository": {
+    "url": "https://github.com/bitterdev/pixelletter-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0"
+}
