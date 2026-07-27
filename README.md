@@ -4,7 +4,7 @@
 
 Local MCP server (stdio) for the [PixelLetter](https://www.pixelletter.de/) HTTPS interface. Hand it a PDF and a destination country and PixelLetter prints, folds, franks and posts the letter, optionally as registered mail. It also sends faxes, cancels orders, reads the account balance and drives the electronic invoice signature.
 
-It pairs with [pdf-letter-mcp](https://github.com/fabianbitter/pdf-letter-mcp): that server writes a DIN 5008 letter PDF, this one puts it in the post. `send_letter` takes the absolute path that `create_letter` returns.
+It pairs with [pdf-letter-mcp](https://github.com/bitterdev/pdf-letter-mcp): that server writes a DIN 5008 letter PDF, this one puts it in the post. `send_letter` takes the absolute path that `create_letter` returns.
 
 The implementation follows the published documentation: the HTTPS handbook, the e-mail handbook, the two signature handbooks, the reference PHP class (version 2.01) and the public error code list. Three values are not printed in those documents, colour printing, GoGreen postage and the NODUPLEX switch, and they are taken from the [hudora/pyPostal](https://github.com/hudora/pyPostal) client that has been sending real orders with them. They are marked as such in the table below. Nothing else is invented.
 
