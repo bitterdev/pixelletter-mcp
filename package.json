@@ -1,6 +1,6 @@
 {
   "name": "pixelletter-mcp",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Local stdio MCP server for the PixelLetter HTTPS interface: send PDF files or plain text as physical letters and faxes, with registered mail options, test mode and account balance.",
   "mcpName": "io.github.bitterdev/pixelletter-mcp",
   "author": "Fabian Bitter (fabian@bitter.de)",

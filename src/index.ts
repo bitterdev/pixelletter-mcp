@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /* Author: Fabian Bitter (fabian@bitter.de) */
 
+import { createRequire } from 'node:module';
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { z } from 'zod';
@@ -26,7 +27,14 @@ import {
   textLetterShape,
 } from './server/schema.js';
 
-const packageVersion = '1.0.0';
+const packageVersion = ((): string => {
+  try {
+    const require = createRequire(import.meta.url);
+    return (require('../../package.json') as { version: string }).version;
+  } catch {
+    return '0.0.0';
+  }
+})();
 
 const server = new McpServer(
   { name: 'pixelletter-mcp', version: packageVersion },
