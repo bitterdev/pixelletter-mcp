@@ -6,5 +6,38 @@
     "url": "https://github.com/bitterdev/pixelletter-mcp",
     "source": "github"
   },
-  "version": "1.0.0"
+  "version": "1.0.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "pixelletter-mcp",
+      "version": "1.0.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "PIXELLETTER_EMAIL",
+          "description": "E-mail address the PixelLetter account is registered with",
+          "isRequired": true
+        },
+        {
+          "name": "PIXELLETTER_PASSWORD",
+          "description": "PixelLetter account password",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "PIXELLETTER_DEFAULT_DESTINATION",
+          "description": "Default destination country as a two letter ISO code, for example DE",
+          "isRequired": false
+        },
+        {
+          "name": "PIXELLETTER_FORCE_TEST_MODE",
+          "description": "Force test mode for every order, so nothing is printed, sent or charged",
+          "isRequired": false
+        }
+      ]
+    }
+  ]
 }
